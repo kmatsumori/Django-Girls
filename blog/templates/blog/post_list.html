@@ -13,7 +13,7 @@
         <div>
             <p>{{ post.published_date|date:"D d M Y, h:ia" }}</p>
             <h2><a href="">{{ post.title }}</a></h2>
-            <p>{{ post.text }}</p>
+            <p>{{ post.text|linebreaks }}</p>
         </div>
 {% endfor %}
         <div>
