@@ -7,12 +7,15 @@
             <h1><a href="">Django Girls Blog</a></h1>
         </div>
 
-        <div>
-            <p>published: 18.07.2015, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Hello, World!</p>
-        </div>
+        {{ posts }}
 
+{% for post in posts %}
+        <div>
+            <p>{{ post.published_date|date:"D d M Y, h:ia" }}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text }}</p>
+        </div>
+{% endfor %}
         <div>
             <p>published: 18.07.2015, 12:14</p>
             <h2><a href="">My second post</a></h2>
